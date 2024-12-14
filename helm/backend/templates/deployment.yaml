@@ -4,7 +4,7 @@ metadata:
   name: backend
   namespace: back
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.replicas }}  # Refers to replicas from values.yaml
   selector:
     matchLabels:
       app: backend
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: {{ .Values.image }}/{{ .Values.tag }}
-      ports:
-        - containerPort: {{ .Values.containerPort }}
+          image: {{ .Values.repository }}/{{ .Values.tag }}  # Access image and tag from values.yaml
+          ports:
+            - containerPort: {{ .Values.containerPort }}  # Access containerPort from values.yaml

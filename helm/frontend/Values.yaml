@@ -1,7 +1,10 @@
+replicaCount: 1
 
-replicas: 1
-image: sukhishergill
-tag: frontend:latest
+image:
+  repository: sukhishergill
+  tag: frontend:latest
+
 containerPort: 3000
 
-type: LoadBalancer
+service:
+  type: LoadBalancer

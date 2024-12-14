@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: frontend-service
 spec:
-  type: {{ .Values.service.type }}  # Corrected for service type mapping in `values.yaml`
+  type: {{ .Values.service.type }}  # Ensure this is the correct templating syntax
   ports:
     - port: 80
       targetPort: {{ .Values.containerPort }}

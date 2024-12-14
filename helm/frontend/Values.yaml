@@ -1,8 +1,8 @@
 replicaCount: 1
 
-image:
-  repository: sukhishergill/frontend  # Make sure this is the correct image
-  tag: latest
+
+repository: sukhishergill/frontend  # Make sure this is the correct image
+tag: latest
 
 containerPort: 3000
 

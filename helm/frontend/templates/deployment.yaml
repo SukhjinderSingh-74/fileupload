@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.replicaCount }}  # Ensure the value matches your `values.yaml`
   selector:
     matchLabels:
       app: frontend
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: {{ .Values.image }}/{{ .Values.tag }}
-      ports:
-          - containerPort: {{ .Values.containerPort }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"  # Adjusted for Helm's repository and tag format
+          ports:
+            - containerPort: {{ .Values.containerPort }}

@@ -1,0 +1,7 @@
+
+replicas: 1
+image: sukhishergill
+tag: frontend:latest
+containerPort: 3000
+
+type: LoadBalancer

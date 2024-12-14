@@ -1,10 +1,10 @@
 replicaCount: 1
 
 image:
-  repository: sukhishergill
-  tag: frontend:latest
+  repository: sukhishergill/frontend  # Make sure this is the correct image
+  tag: latest
 
 containerPort: 3000
 
 service:
-  type: LoadBalancer
+  type: LoadBalancer  # Ensure this field exists in the values.yaml file

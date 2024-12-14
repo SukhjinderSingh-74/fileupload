@@ -1,0 +1,8 @@
+
+replicas: 2
+image: sukhishergill
+tag: backend:v1
+containerPort: 5000
+
+
+type: LoadBalancer

@@ -6,5 +6,5 @@ image:
 
 containerPort: 3000
 
-service:
-  type: LoadBalancer  # Ensure this field exists in the values.yaml file
+
+type: LoadBalancer  # Ensure this field exists in the values.yaml file

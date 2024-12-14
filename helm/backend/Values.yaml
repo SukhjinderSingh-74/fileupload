@@ -1,6 +1,6 @@
-
 replicas: 2
-image: sukhishergill
+
+repository: sukhishergill
 tag: backend:v1
 containerPort: 5000
 
